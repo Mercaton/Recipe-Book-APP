@@ -22,9 +22,9 @@ const AddRecipe = () => {
     };
 
     return (
-        <div>
+        <section className="add-recipe__wrapper">
             <h2 className="addrecipe-hdl">Dodaj nowy przepis</h2>
-            <form onSubmit={handleSubmit}>
+            <form className="recipeform" onSubmit={handleSubmit}>
                 <label>
                     Tytuł:
                     <input
@@ -52,7 +52,7 @@ const AddRecipe = () => {
                 </label>
                 <button type="submit">Dodaj Przepis</button>
             </form>
-        </div>
+        </section>
     );
 };
 
