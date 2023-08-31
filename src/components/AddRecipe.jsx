@@ -50,7 +50,7 @@ const AddRecipe = () => {
                         required
                     />
                 </label>
-                <button type="submit">Dodaj Przepis</button>
+                <button className="add-btn" type="submit">Dodaj Przepis</button>
             </form>
         </section>
     );

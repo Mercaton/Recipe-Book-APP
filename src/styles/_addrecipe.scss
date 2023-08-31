@@ -1,16 +1,48 @@
 .add-recipe__wrapper {
-
+  min-height: 100vh;
+  background-color: darkblue;
+  label {
+    padding: 20px;
+  }
 
 }
 
 .recipeform {
-  display: grid;
+  display: flex;
   flex-direction: column;
   width: 300px;
   margin: auto;
+  background-color: lightgrey;
+  padding: 40px 30px;
+  border-radius: 17px;
+  input {
+    border-radius: 5px;
+    border: none;
+    margin-left: 10px;
+    height: 30px;
+  }
+
 }
 
 .addrecipe-hdl {
-  color: blue;
+  color: whitesmoke;
+  text-align: center;
+  margin: auto;
+  padding: 20px;
 
 }
+
+.add-btn {
+  cursor: pointer;
+  background-color: pink;
+  padding: 10px 30px;
+  border-radius: 7px;
+  border: none;
+  box-shadow: 0 0 3px black;
+
+
+}
+.add-btn:hover {
+   background-color: darkblue;
+   color: pink;
+ }
