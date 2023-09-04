@@ -38,6 +38,7 @@ const AddRecipe = () => {
                     Składniki:
                     <textarea
                         value={ingredients}
+                        rows="10"
                         onChange={(e) => setIngredients(e.target.value)}
                         required
                     />
@@ -46,6 +47,7 @@ const AddRecipe = () => {
                     Instrukcje:
                     <textarea
                         value={instructions}
+                        rows="20"
                         onChange={(e) => setInstructions(e.target.value)}
                         required
                     />
