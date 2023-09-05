@@ -52,7 +52,7 @@ const AddRecipe = () => {
                         required
                     />
                 </label>
-                <button className="add-btn" type="submit">Dodaj Przepis</button>
+                <button className="add-btn" role="button" type="submit"><span className="text">Dodaj przepis</span></button>
             </form>
         </section>
     );
