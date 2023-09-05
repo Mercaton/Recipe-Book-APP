@@ -1,6 +1,8 @@
 .add-recipe__wrapper {
   min-height: 100vh;
-  background: linear-gradient(90deg, #141E30, #243B55);
+
+  background: url("src/assets/images/cookBookBGC.jpg") center no-repeat;
+  background-size: cover;
   label {
     padding: 20px;
   }
@@ -11,7 +13,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 300px;
+  width: 500px;
   margin: auto;
   background-color: lightgrey;
   padding: 40px 30px;
@@ -21,7 +23,7 @@
     height: 30px;
   }
   textarea {
-    min-width: 200px;
+    min-width: 100% ;
   }
 
 }
@@ -35,6 +37,7 @@
 }
 
 .add-btn {
+  width: 60%;
   color: black;
   cursor: pointer;
   background: linear-gradient(67deg, orange, white);
