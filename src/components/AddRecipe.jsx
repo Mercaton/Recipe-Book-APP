@@ -23,8 +23,9 @@ const AddRecipe = () => {
 
     return (
         <section className="add-recipe__wrapper">
-            <h2 className="addrecipe-hdl">Dodaj nowy przepis</h2>
+
             <form className="recipeform" onSubmit={handleSubmit}>
+                <h1 className="addrecipe-hdl">Dodaj nowy przepis</h1>
                 <label>
                     Tytuł:
                     <input
@@ -38,7 +39,7 @@ const AddRecipe = () => {
                     Składniki:
                     <textarea
                         value={ingredients}
-                        // rows="5"
+                        rows="5"
                         onChange={(e) => setIngredients(e.target.value)}
                         required
                     />
