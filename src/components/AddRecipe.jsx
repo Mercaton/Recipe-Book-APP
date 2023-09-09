@@ -21,6 +21,14 @@ const AddRecipe = () => {
         setInstructions('');
     };
 
+    // const btn = document.querySelector(".add-btn");
+    // btn.addEventListener("mouseover", function() {
+    //     this.textContent = "Dodaj";
+    // })
+    // btn.addEventListener("mouseout", function () {
+    //     this.textContent = "Dodaj przepis"
+    // })
+
     return (
         <section className="add-recipe__wrapper">
 
@@ -60,3 +68,5 @@ const AddRecipe = () => {
 };
 
 export default AddRecipe;
+
+// <i className="fa-regular fa-file-plus"></i>
