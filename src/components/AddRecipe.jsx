@@ -23,7 +23,7 @@ const AddRecipe = () => {
 
     // const btn = document.querySelector(".add-btn");
     // btn.addEventListener("mouseover", function() {
-    //     this.textContent = "Dodaj";
+    //     this.textContent = <i className="fa-regular fa-file-plus"></i>;
     // })
     // btn.addEventListener("mouseout", function () {
     //     this.textContent = "Dodaj przepis"
@@ -69,4 +69,4 @@ const AddRecipe = () => {
 
 export default AddRecipe;
 
-// <i className="fa-regular fa-file-plus"></i>
+//
