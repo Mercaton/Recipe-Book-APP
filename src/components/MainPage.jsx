@@ -4,7 +4,7 @@ import Header from "./Header.jsx";
 function MainPage() {
     return (
         <>
-            <Header/>
+            <h1>Hello World</h1>
 
 
         </>
