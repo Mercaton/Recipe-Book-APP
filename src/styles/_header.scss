@@ -1,4 +1,6 @@
 .header {
+
+  height: 80px;
   position: sticky;
   top: 0;
   z-index: 1;
@@ -8,6 +10,7 @@
 }
 
 .menu-box {
+  margin-top: 15px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -17,8 +20,30 @@
     text-align: center;
   }
   h1 {
-    color: orange;
+    background-image: linear-gradient(45deg, black, orange);
+    -webkit-background-clip: text;
+    color: transparent;
     font-family: 'Pacifico', cursive;
+    font-size: 1.5rem;
+  }
+  .logo-box {
+    border: 0.5px solid white;
+    border-radius: 5px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  .header-btn {
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+  }
+  .header-btn:hover {
+    box-shadow: 0 0 5px orange;
+    transform: scale(1.02);
   }
 }
 
