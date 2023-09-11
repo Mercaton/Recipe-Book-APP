@@ -1,0 +1,28 @@
+.main-page {
+  min-height: 100vh;
+  background: no-repeat url("/src/assets/images/cookBookBGC.jpg") center;
+  opacity: 0.9;
+}
+
+.recipe-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+
+}
+
+.recipe-details {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  width: 360px;
+  height: 400px;
+  border-radius: 5px;
+}
+
+.recipe-title {
+  color: red;
+  z-index: 1;
+}
