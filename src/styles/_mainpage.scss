@@ -8,21 +8,23 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  gap: 20px;
+
 
 }
 
 .recipe-details {
+  opacity: 0.95;
   margin-top: 40px;
   display: flex;
   flex-direction: column;
-  background-color: black;
-  width: 360px;
-  height: 400px;
+  background-color: lightgray;
+  width: 260px;
+  height: 300px;
   border-radius: 5px;
 }
 
 .recipe-title {
-  color: red;
-  z-index: 1;
+  color: black;
+  text-align: center;
+  margin: auto;
 }
