@@ -18,14 +18,28 @@
     flex-direction: column;
     background-color: black;
     width: 260px;
-    height: 300px;
+    height: 340px;
     border-radius: 5px;
+    overflow: hidden;
+
   }
   .recipe-title {
     color: orange;
     text-align: center;
     margin: auto;
   }
+  a {
+    text-decoration: none;
+  }
+
+}
+
+.recipe-details img {
+  transition: transform .4s;
+}
+
+.recipe-details img:hover {
+  transform: scale(1.1);
 
 }
 
