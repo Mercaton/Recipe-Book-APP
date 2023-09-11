@@ -16,18 +16,18 @@
 }
 
 .recipe-details {
-  opacity: 0.95;
+  opacity: 0.9;
   margin-top: 40px;
   display: flex;
   flex-direction: column;
-  background-color: lightgray;
+  background-color: black;
   width: 260px;
   height: 300px;
   border-radius: 5px;
 }
 
 .recipe-title {
-  color: black;
+  color: orange;
   text-align: center;
   margin: auto;
 }

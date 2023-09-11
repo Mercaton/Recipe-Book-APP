@@ -5,10 +5,10 @@ function Header() {
         <>
             <header className="header">
                 <div className="menu-box">
-                    <div className="logo-box">
-                        <h2>Family</h2>
-                        <h1>CookBook</h1>
-                    </div>
+                    <a href="/"><div className="logo-box">
+                        <h1>Family</h1>
+                        <h2>CookBook</h2>
+                    </div></a>
                     <a href="/add"><i className="fa-regular fa-file-plus"></i><button>Dodaj przepis</button></a>
                 </div>
             </header>
