@@ -1,11 +1,14 @@
 .main-page {
   min-height: 100vh;
-  background: no-repeat url("/src/assets/images/cookBookBGC.jpg") center;
+  //width: 100%;
+  background: no-repeat url("/src/assets/images/cookBookBGC.jpg") center fixed;
+  background-size: cover;
   opacity: 0.9;
 }
 
 .recipe-list {
   display: flex;
+  gap: 10px;
   flex-wrap: wrap;
   justify-content: space-evenly;
 

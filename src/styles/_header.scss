@@ -1,9 +1,14 @@
-
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: lightblue;
+}
 
 .menu-box {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 30px;
+  //margin-top: 30px;
 }
 
