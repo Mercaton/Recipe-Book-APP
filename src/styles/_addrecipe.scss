@@ -2,6 +2,7 @@
   min-height: 100vh;
   background: no-repeat url("/src/assets/images/cookBookBGC.jpg") center;
   //opacity: 0.6;
+  display: flex;
 
 
 
@@ -13,7 +14,7 @@
 }
 
 .recipeform {
-  opacity: 1;
+  opacity: 0.9;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -120,7 +121,7 @@
 .add-btn:hover {
   //background: linear-gradient(67deg, white, orange);
   color: black;
-  box-shadow: 0 0 3px orange;
+  box-shadow: 0 0 3px black;
   border:none;
 }
 
