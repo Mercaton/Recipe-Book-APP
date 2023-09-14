@@ -52,6 +52,7 @@ const AddRecipe = () => {
                         required
                     />
                 </label>
+
                 <label>
                     Instrukcje:
                     <textarea
@@ -61,6 +62,10 @@ const AddRecipe = () => {
                         required
                     />
                 </label>
+                {/*<label>*/}
+                {/*    Dodaj zdjęcie:*/}
+                {/*    <input type="file" id="myFile" />*/}
+                {/*</label>*/}
                 <button className="add-btn" role="button" type="submit"><span className="text">Dodaj przepis</span></button>
             </form>
         </section>
