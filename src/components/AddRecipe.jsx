@@ -1,25 +1,33 @@
 import React, { useState } from 'react';
 
+
 const AddRecipe = () => {
     // Inicjalizujemy stan dla pól formularza
     const [title, setTitle] = useState('');
     const [ingredients, setIngredients] = useState('');
     const [instructions, setInstructions] = useState('');
+    const [image, setImage] = useState('');
 
     // Funkcja obsługująca przesłanie formularza
-    const handleSubmit = (e) => {
+    const handleFormSubmit = (e) => {
         e.preventDefault();
 
         // Tutaj możesz wykorzystać dane z formularza, np. przesłać do bazy danych
         console.log('Tytuł: ', title);
         console.log('Składniki: ', ingredients);
         console.log('Instrukcje: ', instructions);
+        console.log('Zdjęcie', image);
 
         // Czyszczenie pól formularza po wysłaniu
         setTitle('');
         setIngredients('');
         setInstructions('');
+        setImage('');
+
+
     };
+
+
 
     // const btn = document.querySelector(".add-btn");
     // btn.addEventListener("mouseover", function() {
@@ -32,7 +40,7 @@ const AddRecipe = () => {
     return (
         <section className="add-recipe__wrapper">
 
-            <form className="recipeform" onSubmit={handleSubmit}>
+            <form className="recipeform" onSubmit={handleFormSubmit}>
                 <h1 className="addrecipe-hdl">Dodaj nowy przepis</h1>
                 <label>
                     Tytuł:
@@ -47,7 +55,7 @@ const AddRecipe = () => {
                     Składniki:
                     <textarea
                         value={ingredients}
-                        rows="5"
+                        rows="4"
                         onChange={(e) => setIngredients(e.target.value)}
                         required
                     />
@@ -57,7 +65,7 @@ const AddRecipe = () => {
                     Instrukcje:
                     <textarea
                         value={instructions}
-                        rows="5"
+                        rows="4"
                         onChange={(e) => setInstructions(e.target.value)}
                         required
                     />
@@ -66,7 +74,10 @@ const AddRecipe = () => {
                     Dodaj zdjęcie:
                     <input type="file" id="myFile" />
                 </label>
-                <button className="add-btn" role="button" type="submit"><span className="text">Dodaj przepis</span></button>
+                <button
+                    className="add-btn"
+                    role="button"
+                    type="submit"><span className="text">Dodaj przepis</span></button>
             </form>
         </section>
     );

@@ -9,7 +9,7 @@ function Header() {
                         <h1>Family</h1>
                         <h2>CookBook</h2>
                     </div></a>
-                    <a href="/add"><i className="fa-regular fa-file-plus"></i><button className="header-btn"> + Dodaj przepis</button></a>
+                    <a href="/add"><i className="fa-regular fa-file-plus"></i><button className="header-btn"> <b>+</b> Dodaj przepis</button></a>
                 </div>
             </header>
 
