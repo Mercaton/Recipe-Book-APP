@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import Recipe from 'server/RecipeSchema';
+
 
 
 const AddRecipe = () => {
@@ -19,22 +19,22 @@ const AddRecipe = () => {
         console.log('Instrukcje: ', instructions);
         console.log('Zdjęcie', image);
 
-        const newRecipe = new Recipe({
-            title,
-            ingredients,
-            instructions,
-            image,
-        });
-
-        newRecipe.save()
-            .then(() => {
-            console.log('Przepis został dodany do bazy danych')
-
-
-        })
-            .catch((error) => {
-                console.error('Błąd podczas dodawania przepisu', error)
-            });
+        // const newRecipe = new Recipe({
+        //     title,
+        //     ingredients,
+        //     instructions,
+        //     image,
+        // });
+        //
+        // newRecipe.save()
+        //     .then(() => {
+        //     console.log('Przepis został dodany do bazy danych')
+        //
+        //
+        // })
+        //     .catch((error) => {
+        //         console.error('Błąd podczas dodawania przepisu', error)
+        //     });
 
         // Czyszczenie pól formularza po wysłaniu
         setTitle('');
