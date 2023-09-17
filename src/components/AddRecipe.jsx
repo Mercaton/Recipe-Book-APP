@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+// import Recipe from 'server/RecipeSchema';
 
 
 const AddRecipe = () => {
@@ -18,24 +19,31 @@ const AddRecipe = () => {
         console.log('Instrukcje: ', instructions);
         console.log('Zdjęcie', image);
 
+        const newRecipe = new Recipe({
+            title,
+            ingredients,
+            instructions,
+            image,
+        });
+
+        newRecipe.save()
+            .then(() => {
+            console.log('Przepis został dodany do bazy danych')
+
+
+        })
+            .catch((error) => {
+                console.error('Błąd podczas dodawania przepisu', error)
+            });
+
         // Czyszczenie pól formularza po wysłaniu
         setTitle('');
         setIngredients('');
         setInstructions('');
         setImage('');
 
-
     };
 
-
-
-    // const btn = document.querySelector(".add-btn");
-    // btn.addEventListener("mouseover", function() {
-    //     this.textContent = <i className="fa-regular fa-file-plus"></i>;
-    // })
-    // btn.addEventListener("mouseout", function () {
-    //     this.textContent = "Dodaj przepis"
-    // })
 
     return (
         <section className="add-recipe__wrapper">

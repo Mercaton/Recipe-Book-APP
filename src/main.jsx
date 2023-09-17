@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import MainPage from "./components/MainPage.jsx";
 
+
 const router = createBrowserRouter([
     {
         path: "/",
