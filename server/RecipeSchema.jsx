@@ -10,4 +10,5 @@ const recipeSchema = new mongoose.Schema({
 
 const Recipe = mongoose.model('Recipe', recipeSchema);
 
+// eslint-disable-next-line no-undef
 module.exports = Recipe;
