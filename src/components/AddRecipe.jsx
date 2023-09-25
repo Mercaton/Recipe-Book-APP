@@ -10,14 +10,37 @@ const AddRecipe = () => {
     const [image, setImage] = useState('');
 
     // Funkcja obsługująca przesłanie formularza
-    const handleFormSubmit = (e) => {
+    const handleFormSubmit = async (e) => {
         e.preventDefault();
 
-        // Tutaj możesz wykorzystać dane z formularza, np. przesłać do bazy danych
-        console.log('Tytuł: ', title);
-        console.log('Składniki: ', ingredients);
-        console.log('Instrukcje: ', instructions);
-        console.log('Zdjęcie', image);
+        try {
+            const response = await fetch('api/recipes', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    title,
+                    ingredients,
+                    instructions,
+                    image,
+                }),
+            });
+
+            if (response.ok) {
+                console.log('Przepis został dodany do bazy danych');
+            } else {
+                console.error('Błąd podczas dodawania przepisu');
+            }
+        } catch (error) {
+            console.error('Błąd podczas dodawania przepisu', error);
+        }
+
+        // // Tutaj możesz wykorzystać dane z formularza, np. przesłać do bazy danych
+        // console.log('Tytuł: ', title);
+        // console.log('Składniki: ', ingredients);
+        // console.log('Instrukcje: ', instructions);
+        // console.log('Zdjęcie', image);
 
         // const newRecipe = new Recipe({
         //     title,
