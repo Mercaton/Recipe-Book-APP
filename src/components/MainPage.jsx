@@ -1,7 +1,18 @@
-import React from 'react';
-
+import React, {useEffect, useState} from 'react';
+import axios from 'axios';
 
 function MainPage() {
+    const [recipes, setRecipes] = useState([]);
+
+    useEffect(() => {
+        axios.get('api/recipes')
+            .then((response) => {
+                setRecipes(response.data);
+            })
+            .catch((error) => {
+                console.error('Błąd podczas pobierania przepisów', error);
+            });
+    }, []);
     return (
         <>
             <section className="main-page">
