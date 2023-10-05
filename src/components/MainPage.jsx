@@ -2,22 +2,23 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 
 // const openPopupButton = document.getElementById('openPopup');
-// const closePopupButton = document.getElementById('closePopup');
+// // const closePopupButton = document.getElementById('closePopup');
 // const popup = document.getElementById('popup');
 //
 // openPopupButton.addEventListener('click', () => {
 //     popup.style.display = 'block';
 // });
 //
-// closePopupButton.addEventListener('click', () => {
-//     popup.style.display = 'none';
-// });
+// // closePopupButton.addEventListener('click', () => {
+// //     popup.style.display = 'none';
+// // });
 
 function MainPage() {
     const [recipes, setRecipes] = useState([]);
 
     useEffect(() => {
-        axios.get('api/recipes')
+        axios
+            .get('api/recipes')
             .then((response) => {
                 setRecipes(response.data);
             })
@@ -25,6 +26,7 @@ function MainPage() {
                 console.error('Błąd podczas pobierania przepisów', error);
             });
     }, []);
+
     return (
         <>
             <section className="main-page">
