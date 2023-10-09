@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Recipe = require('../models/RecipeSchema');
+const Recipe = require('.//RecipeSchema');
 
 
 
