@@ -1,6 +1,24 @@
 const mongoose = require('mongoose');
-const Recipe = require('.//RecipeSchema');
-const recipeRoutes = require('')
+const Recipe = require('/server/RecipeSchema');
+const recipeRoutes = require('/server/RecipeRoutes');
+
+const app = express();
+
+mongoose.connect('mongodb://localhost:27017/cookbook', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+});
+
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'Błąd połączenia z MongoDB:'));
+db.once('open', () => {
+    console.log('Połączono z bazą danych MongoDB')
+});
+
+
+
+
+
 
 
 app.use('api/recipes', recipeRoutes);

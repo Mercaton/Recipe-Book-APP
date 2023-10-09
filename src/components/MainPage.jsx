@@ -18,7 +18,7 @@ function MainPage() {
 
     useEffect(() => {
         axios
-            .get('api/recipes')
+            .get('mongodb://localhost:27017/cookbook')
             .then((response) => {
                 setRecipes(response.data);
             })

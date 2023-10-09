@@ -41,3 +41,41 @@ exports.createRecipe = async (req, res) => {
     }
 };
 
+exports.updateRecipe = async (req, res) => {
+    const {id} = req.params;
+    const {title, ingredients, instructions, image} = req.body;
+    try {
+        const updateRecipe = await Recipe.findByIdAndUpdate(id, {
+            title,
+            ingredients,
+            instructions,
+            image,
+        }, {new: true});
+
+        if (!updateRecipe) {
+            return res.status(404).json({error: 'Przepis nie został znaleziony'})
+        }
+
+        res.json(updateRecipe);
+    } catch (error) {
+        console.error('Błąd podczas aktualizacji przepisu', error);
+        res.status(500).json({error: 'Wystąpił błąd podczas aktualizacji przepisu'})
+    }
+};
+
+exports.deleteRecipe = async (req, res) => {
+    const {id} = req.params;
+    try {
+        const deleteRecipe = await Recipe.findByIdAndDelete(id);
+
+        if (!deleteRecipe) {
+            return res.status(404).json({error: 'Przepis nie został znaleziony'})
+        }
+
+        res.json({message: 'Przepis został usunięty'});
+    } catch (error) {
+        console.error('Błąd podczas usuwania przepisu', error);
+        res.status(500).json({error: 'Wystąpił błąd podczas usuwania przepisu'})
+    }
+};
+
