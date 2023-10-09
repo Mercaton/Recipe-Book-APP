@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
 const Recipe = require('.//RecipeSchema');
+const recipeRoutes = require('')
 
 
-
+app.use('api/recipes', recipeRoutes);
 
 app.post('api/recipes', async (req, res) => {
     try {
