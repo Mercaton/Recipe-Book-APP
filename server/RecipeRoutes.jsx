@@ -7,7 +7,7 @@ router.get('/', recipeController.getAllRecipes);
 
 router.get('/:id', recipeController.getRecipeById);
 
-// router.post('/', recipeController.createRecipe);
+router.post('/', recipeController.createRecipe);
 router.post('/recipes', async (req, res) => {
     try {
         const {title, ingredients, instructions, image} = req.body;
