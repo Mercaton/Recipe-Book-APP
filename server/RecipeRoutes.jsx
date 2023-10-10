@@ -20,6 +20,7 @@ router.post('/recipes', async (req, res) => {
         })
 
         await newRecipe.save();
+        res.status(201).json(newRecipe);
     } catch (error) {
         console.error('Błąd podczas dodawania przepisu', error);
         res.status(500).json({error: 'Wystąpił błąd podczas dodawania przepisu'})
