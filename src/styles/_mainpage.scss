@@ -23,8 +23,9 @@
     width: 260px;
     height: 340px;
     border-radius: 5px;
-
     overflow: hidden;
+    box-shadow: 0 0 9px lightgray;
+
 
   }
   .recipe-title {
@@ -38,6 +39,10 @@
 
 }
 
+.recipe-details:hover {
+  box-shadow: 0 2px 29px lightsalmon;
+}
+
 .recipe-details img {
   transition: transform .4s;
 }
@@ -46,6 +51,8 @@
   transform: scale(1.1);
 
 }
+
+
 
 
 
