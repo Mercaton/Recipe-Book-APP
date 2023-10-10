@@ -4,7 +4,7 @@ const recipeRoutes = require('/server/RecipeRoutes');
 
 const app = express();
 
-mongoose.connect('mongodb://localhost:27017/cookbook', {
+mongoose.connect('mongodb://localhost:27017/CookBook', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
